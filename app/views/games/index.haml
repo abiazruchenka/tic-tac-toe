@@ -1,0 +1,17 @@
+%p{id: "notice"}
+  = notice
+
+%h1
+  =t('title')
+
+.row
+  .col-sm-6
+    .row.table
+      - 3.times do |i|
+        - 3.times do |j|
+          .col-sm-4
+            .square{id: "index_#{i}#{j}"}
+              = hidden_field_tag "move_#{i}_#{j}", "#{i}#{j}", {class: 'move'}
+
+
+
